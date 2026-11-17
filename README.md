@@ -108,7 +108,7 @@ Nmap is a network scanning tool used to discover open ports and identify running
 
 Command:
 
-nmap -sV -p 21 <TARGET_IP>
+nmap -sV -p 21 192.168.157.129
 
 Use:
 
@@ -187,7 +187,7 @@ Hydra is used to perform authorized password testing against the FTP service usi
 
 Command:
 
-hydra -l <USERNAME> -P Swayapass.txt ftp://<TARGET_IP> -t 4 -V
+sudo hydra -l msfadmin -p nikhil.txt ftp://192.168.157.129
 
 Command Explanation:
 
@@ -210,7 +210,78 @@ Use:
 Information:
 
 After identifying valid login credentials during authorized testing, an FTP connection can be established to verify the login.
+<img width="732" height="280" alt="ftp hydra" src="https://github.com/user-attachments/assets/6bff1fc1-62ae-4ec1-8bbf-bdb2585f31eb" />
 
+Command:
+
+ftp 192.168.157.129
+
+Use:
+
+- To connect to the FTP server.
+- To verify the discovered credentials.
+- To understand FTP authentication.
+
+---
+
+Security Recommendations
+
+- Use strong and complex passwords.
+- Enable Multi-Factor Authentication (MFA).
+- Implement login rate limiting.
+- Monitor failed login attempts.
+- Disable unused services.
+- Use secure file transfer protocols such as SFTP.
+- Regularly update systems and applications.
+
+Conclusion
+
+This project demonstrates how Hydra can be used for authorized FTP password security testing in a controlled lab environment.
+
+It provides practical knowledge of Nmap scanning, FTP service detection, password list creation, and brute-force testing.
+
+Project Environment: Kali Linux, Metasploitable 2, VMware Workstation
+
+Tools Used: Hydra, Nmap, FTP
+🔐 SECURITY RECOMMENDATIONS
+
+- Use Strong Passwords: Create long and complex passwords.
+- Enable Multi-Factor Authentication: Add an extra layer of account security.
+- Implement Login Rate Limiting: Restrict repeated login attempts.
+- Monitor Failed Login Attempts: Regularly check authentication logs.
+- Disable Unused Services: Reduce unnecessary network exposure.
+- Use Secure Protocols: Prefer SFTP instead of FTP.
+
+---
+
+📚 LEARNING OUTCOMES
+
+Through this project, I learned:
+
+- Basic concepts of Brute Force Attacks.
+- Installation and usage of Hydra.
+- Network scanning using Nmap.
+- FTP service identification and testing.
+- Password security and authentication risks.
+- Basic security measures against brute force attacks.
+
+---
+
+⚠️ DISCLAIMER
+
+This project is created strictly for educational and cybersecurity learning purposes.
+
+All testing was performed in an isolated lab environment using Metasploitable 2.
+
+Unauthorized access or testing against systems without permission is strictly prohibited.
+
+---
+
+👨‍💻 AUTHOR
+
+Ghansham Gahine
+
+Cyber Security Enthusiast | Aspiring SOC Analyst
 
 
 
